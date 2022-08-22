@@ -6,6 +6,8 @@ Please drag and drop this karate-summary.html file in browser to view report
 
 Important points including Build and Run this project:
 1) All the dependencies are defined in POM.xml file
+
+Run the feature files:
 2) Their are two ways to run the feature files
     a) Running individually: This can be done by doing right click on respective feature file and choosing option "Run Feature:GetTesting"
     b) Using FeatureRunner file: This can be done either by right click on 'FeatureRunner' file and choosing option "Run FeatureRunner" or opening
@@ -25,13 +27,19 @@ Note: 1) If you want to run just one file via FeatureRunner file then just menti
 
       3) You can chose the tag name of your choice, but we need to mention same tags(example:@test) before the each scenario in all file
 
+Reports:
 3) When you run the tests the report will be generated and will be found in path
     /Karate-So-Energy/target/karate-reports/karate-summary.html
 
 4) To view the report you can either simply open by double click or to view even better just drag and drop in browser
 
+Feature file location:
 5) Feature files can be found under path : /Karate-So-Energy/src/test/java/feature
 
+Runner file location:
 6) Runner file can be found under path: /Karate-So-Energy/src/test/java/feature/FeatureRunner
 
 7) You can also create a configuration to run Runner file, by creating JUnit runner using edit configuration
+
+CICD file:
+8) There is .cirlceci folder which contains config.yaml file with all the steps which helps to integrate with CICD feature of this framework
