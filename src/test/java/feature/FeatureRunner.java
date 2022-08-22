@@ -1,13 +1,13 @@
 package feature;
 
 import com.intuit.karate.KarateOptions;
-import com.intuit.karate.Runner;
 import com.intuit.karate.junit4.Karate;
-import cucumber.api.java.hr.Kad;
 import org.junit.runner.RunWith;
 
 @RunWith(Karate.class)
-@KarateOptions(features = "feature")
+@KarateOptions(features =  {"classpath:feature/getTesting.feature",
+                            "classpath:feature/PostTesting.feature",
+                            "classpath:feature/PutTesting.feature"})
 public class FeatureRunner {
 
 }
