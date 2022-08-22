@@ -1,0 +1,505 @@
+<testsuite failures="3" name="src/test/java/FeatureFiles/PostTesting.feature" skipped="0" tests="7" time="2.800565">
+  <testcase classname="src.test.java.FeatureFiles.PostTesting" name="Verify that api is able to post request successfully" time="1.05159">
+    <system-out>* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response == expectedPostResponse ................................ passed
+And match response.title == 'SoEnergyTitle' ............................... passed
+And match response.body == 'SoEnergyBody' ................................. passed
+And match response.userId == 2 ............................................ passed
+And assert response.id != null ............................................ passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.FeatureFiles.PostTesting" name="Verify that api is able to post request successfully" time="0.277914">
+    <failure message="PostTesting.feature:16 - no step-definition method match found for: match response == ">* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response == expectedPostResponse ................................ passed
+And match response.title == 'SoEnergyTitle' ............................... passed
+And match response.body == 'SoEnergyBody' ................................. passed
+And match response.userId == 2 ............................................ passed
+And assert response.id != null ............................................ passed
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = '          ' .................................. passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == '          ' .................................. skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == 2 ............................................ skipped
+And assert response.id != null ............................................ skipped</failure>
+  </testcase>
+  <testcase classname="src.test.java.FeatureFiles.PostTesting" name="Verify that api is able to post request successfully" time="0.231543">
+    <failure message="PostTesting.feature:16 - no step-definition method match found for: match response == ">* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response == expectedPostResponse ................................ passed
+And match response.title == 'SoEnergyTitle' ............................... passed
+And match response.body == 'SoEnergyBody' ................................. passed
+And match response.userId == 2 ............................................ passed
+And assert response.id != null ............................................ passed
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = '          ' .................................. passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == '          ' .................................. skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == 2 ............................................ skipped
+And assert response.id != null ............................................ skipped
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == 'SoEnergyTitle' ............................... skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == 2 ............................................ skipped
+And assert response.id != null ............................................ skipped</failure>
+  </testcase>
+  <testcase classname="src.test.java.FeatureFiles.PostTesting" name="Verify that api is able to post request successfully" time="0.344024">
+    <failure message="PostTesting.feature:16 - no step-definition method match found for: match response == ">* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response == expectedPostResponse ................................ passed
+And match response.title == 'SoEnergyTitle' ............................... passed
+And match response.body == 'SoEnergyBody' ................................. passed
+And match response.userId == 2 ............................................ passed
+And assert response.id != null ............................................ passed
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = '          ' .................................. passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == '          ' .................................. skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == 2 ............................................ skipped
+And assert response.id != null ............................................ skipped
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == 'SoEnergyTitle' ............................... skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == 2 ............................................ skipped
+And assert response.id != null ............................................ skipped
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = null ......................................... passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == 'SoEnergyTitle' ............................... skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == null ......................................... skipped
+And assert response.id != null ............................................ skipped</failure>
+  </testcase>
+  <testcase classname="src.test.java.FeatureFiles.PostTesting" name="Verify the behaviour of api on sending request keys as empty" time="0.301323">
+    <system-out>* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response == expectedPostResponse ................................ passed
+And match response.title == 'SoEnergyTitle' ............................... passed
+And match response.body == 'SoEnergyBody' ................................. passed
+And match response.userId == 2 ............................................ passed
+And assert response.id != null ............................................ passed
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = '          ' .................................. passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == '          ' .................................. skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == 2 ............................................ skipped
+And assert response.id != null ............................................ skipped
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == 'SoEnergyTitle' ............................... skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == 2 ............................................ skipped
+And assert response.id != null ............................................ skipped
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = null ......................................... passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == 'SoEnergyTitle' ............................... skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == null ......................................... skipped
+And assert response.id != null ............................................ skipped
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = '          ' .................................. passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response.title == '          ' .................................. passed
+And match response.body == 'SoEnergyBody' ................................. passed
+And match response.userId == 2 ............................................ passed
+And assert response.id != null ............................................ passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.FeatureFiles.PostTesting" name="Verify the behaviour of api on sending request keys as empty" time="0.297261">
+    <system-out>* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response == expectedPostResponse ................................ passed
+And match response.title == 'SoEnergyTitle' ............................... passed
+And match response.body == 'SoEnergyBody' ................................. passed
+And match response.userId == 2 ............................................ passed
+And assert response.id != null ............................................ passed
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = '          ' .................................. passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == '          ' .................................. skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == 2 ............................................ skipped
+And assert response.id != null ............................................ skipped
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == 'SoEnergyTitle' ............................... skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == 2 ............................................ skipped
+And assert response.id != null ............................................ skipped
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = null ......................................... passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == 'SoEnergyTitle' ............................... skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == null ......................................... skipped
+And assert response.id != null ............................................ skipped
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = '          ' .................................. passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response.title == '          ' .................................. passed
+And match response.body == 'SoEnergyBody' ................................. passed
+And match response.userId == 2 ............................................ passed
+And assert response.id != null ............................................ passed
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response.title == 'SoEnergyTitle' ............................... passed
+And match response.body == 'SoEnergyBody' ................................. passed
+And match response.userId == 2 ............................................ passed
+And assert response.id != null ............................................ passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.FeatureFiles.PostTesting" name="Verify the behaviour of api on sending request keys as empty" time="0.296909">
+    <system-out>* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response == expectedPostResponse ................................ passed
+And match response.title == 'SoEnergyTitle' ............................... passed
+And match response.body == 'SoEnergyBody' ................................. passed
+And match response.userId == 2 ............................................ passed
+And assert response.id != null ............................................ passed
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = '          ' .................................. passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == '          ' .................................. skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == 2 ............................................ skipped
+And assert response.id != null ............................................ skipped
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == 'SoEnergyTitle' ............................... skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == 2 ............................................ skipped
+And assert response.id != null ............................................ skipped
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = null ......................................... passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response ==  .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: PostTesting.feature:16 - no step-definition method match found for: match response == 
+	at ✽.And match response ==  (PostTesting.feature:16)
+
+And match response.title == 'SoEnergyTitle' ............................... skipped
+And match response.body == 'SoEnergyBody' ................................. skipped
+And match response.userId == null ......................................... skipped
+And assert response.id != null ............................................ skipped
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = '          ' .................................. passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response.title == '          ' .................................. passed
+And match response.body == 'SoEnergyBody' ................................. passed
+And match response.userId == 2 ............................................ passed
+And assert response.id != null ............................................ passed
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = 2 ............................................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response.title == 'SoEnergyTitle' ............................... passed
+And match response.body == 'SoEnergyBody' ................................. passed
+And match response.userId == 2 ............................................ passed
+And assert response.id != null ............................................ passed
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def requestBody = read('RequestJson/request1.json') ..................... passed
+* def expectedPostResponse = read('ResponseJson/responsePost.json') ....... passed
+Given path 'posts' ........................................................ passed
+And request requestBody ................................................... passed
+And set requestBody.title = 'SoEnergyTitle' ............................... passed
+And set requestBody.body = 'SoEnergyBody' ................................. passed
+And set requestBody.userId = null ......................................... passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match response.title == 'SoEnergyTitle' ............................... passed
+And match response.body == 'SoEnergyBody' ................................. passed
+And match response.userId == null ......................................... passed
+And assert response.id != null ............................................ passed</system-out>
+  </testcase>
+</testsuite>

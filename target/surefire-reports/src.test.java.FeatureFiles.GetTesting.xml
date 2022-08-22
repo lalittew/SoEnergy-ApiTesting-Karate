@@ -1,0 +1,55 @@
+<testsuite failures="0" name="src/test/java/FeatureFiles/getTesting.feature" skipped="0" tests="3" time="1.061734">
+  <testcase classname="src.test.java.FeatureFiles.getTesting" name="Verify that api is returning correct response for given postId" time="0.891161">
+    <system-out>* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def expectedOutput = read('ResponseJson/responseGet.json') .............. passed
+Given path 'comments' ..................................................... passed
+And param postId = 1 ...................................................... passed
+When method Get ........................................................... passed
+Then status 200 ........................................................... passed
+And assert response.length == 5 ........................................... passed
+And match response == expectedOutput ...................................... passed
+And match responseHeaders['Content-Type'][0] == 'application/json; charset=utf-8' . passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.FeatureFiles.getTesting" name="Verify that api is empty response body on giving wrong postId" time="0.087319">
+    <system-out>* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def expectedOutput = read('ResponseJson/responseGet.json') .............. passed
+Given path 'comments' ..................................................... passed
+And param postId = 1 ...................................................... passed
+When method Get ........................................................... passed
+Then status 200 ........................................................... passed
+And assert response.length == 5 ........................................... passed
+And match response == expectedOutput ...................................... passed
+And match responseHeaders['Content-Type'][0] == 'application/json; charset=utf-8' . passed
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def expectedOutput = read('ResponseJson/responseGet.json') .............. passed
+Given path 'comments' ..................................................... passed
+And param postId = 'a' .................................................... passed
+When method Get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == [] .................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.FeatureFiles.getTesting" name="Verify that api returning 404 on using wrong url" time="0.083254">
+    <system-out>* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def expectedOutput = read('ResponseJson/responseGet.json') .............. passed
+Given path 'comments' ..................................................... passed
+And param postId = 1 ...................................................... passed
+When method Get ........................................................... passed
+Then status 200 ........................................................... passed
+And assert response.length == 5 ........................................... passed
+And match response == expectedOutput ...................................... passed
+And match responseHeaders['Content-Type'][0] == 'application/json; charset=utf-8' . passed
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def expectedOutput = read('ResponseJson/responseGet.json') .............. passed
+Given path 'comments' ..................................................... passed
+And param postId = 'a' .................................................... passed
+When method Get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == [] .................................................. passed
+* url 'https://jsonplaceholder.typicode.com/' ............................. passed
+* def expectedOutput = read('ResponseJson/responseGet.json') .............. passed
+Given path 'commentss' .................................................... passed
+And param postId = 'a' .................................................... passed
+When method Get ........................................................... passed
+Then status 404 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>
