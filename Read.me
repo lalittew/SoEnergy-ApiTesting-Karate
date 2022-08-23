@@ -2,6 +2,7 @@ Project Overview: This project is created for testing the given Api, using Karat
 I have used Intellij as IDE and Mac operating system to write the framework
 I have already given a run once and test report can be found in path: /Karate-So-Energy/target/karate-reports/karate-summary.html
 Please drag and drop this karate-summary.html file in browser to view report
+This project includes the setup for running the performance test
 
 
 Important points including Build and Run this project:
@@ -45,5 +46,10 @@ CICD file:
 8) There is .cirlceci folder which contains config.yaml file with all the steps which helps to integrate with CICD feature of this framework
 
 
-GitHub location:
-9) The git hub link to clone the project is : https://github.com/lalittew/SoEnergy-ApiTesting-Karate.git
+Performance test:
+9) Feature file and simulation file for performance test can be found at path: Karate-So-Energy/src/test/java/PerformanceTest
+10) To run the performance test type the below command in terminal
+mvn clean test-compile gatling:test
+
+Note: Currently facing some error in running the performance test, as I have not enough time to fix it, I am unable to generate the report
+But I am able to implement the framework
